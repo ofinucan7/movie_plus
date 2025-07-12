@@ -10,7 +10,7 @@ from schema import UpdatePassword
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://movieplus-production-52bb.up.railway.app"], 
+    allow_origins=["https://movieplus-production.up.railway.app"], 
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
