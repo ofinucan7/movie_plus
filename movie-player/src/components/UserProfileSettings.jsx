@@ -43,6 +43,7 @@ const UserProfileSettings = () => {
       return;
     }
 
+    
     try {
       const res = await fetch(`https://movieplus-production-52bb.up.railway.app/update-password/${storedUsername}`, {
         method: 'PUT',
