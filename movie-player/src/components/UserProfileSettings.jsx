@@ -18,7 +18,7 @@ const UserProfileSettings = () => {
       if (!storedUsername) return;
 
       try {
-        const res = await fetch(`http://localhost:8000/profile/${storedUsername}`);
+        const res = await fetch(`https://movieplus-production-52bb.up.railway.app/profile/${storedUsername}`);
         if (res.ok) {
           const data = await res.json();
           setUserData((prev) => ({
@@ -44,7 +44,7 @@ const UserProfileSettings = () => {
     }
 
     try {
-      const res = await fetch(`http://localhost:8000/update-password/${storedUsername}`, {
+      const res = await fetch(`https://movieplus-production-52bb.up.railway.app/update-password/${storedUsername}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ password: userData.password }),
@@ -65,7 +65,7 @@ const UserProfileSettings = () => {
     if (!confirmDelete) return;
 
     try {
-      const res = await fetch(`http://localhost:8000/delete-account/${storedUsername}`, {
+      const res = await fetch(`https://movieplus-production-52bb.up.railway.app/delete-account/${storedUsername}`, {
         method: 'DELETE',
       });
 
