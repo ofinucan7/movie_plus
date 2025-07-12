@@ -1,7 +1,8 @@
 FROM node:20 AS build
 
 WORKDIR /app
-COPY . .
+COPY movie-player .
+WORKDIR /app/movie-player
 RUN yarn install
 RUN yarn build
 
