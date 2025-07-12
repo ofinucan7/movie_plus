@@ -31,7 +31,7 @@ services:
       context: ./movie-player
     container_name: movie-frontend
     ports:
-      - "3000:80"
+      - "80:80"
 
 volumes:
   postgres_data:
