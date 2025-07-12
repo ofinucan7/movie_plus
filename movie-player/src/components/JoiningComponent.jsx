@@ -46,7 +46,7 @@ const JoiningComponent = () => {
 
     // try to do the post method
     try {
-      const res = await fetch("http://localhost:8000/register", {
+      const res = await fetch("https://movieplus-production-52bb.up.railway.app/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
